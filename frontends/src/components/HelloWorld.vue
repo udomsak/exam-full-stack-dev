@@ -2,14 +2,22 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
+      This will represent for SCG test interview, subject Front-end = Vue.JS I Back-end = Python Flask.
+      <a href="https://docs.google.com/document/d/1tIcAhz7_s5qIUn9lUDcuznPp-4OlGB43vh2c3Pa6Z_g/edit" target="_blank" rel="noopener">Front-end = Vue.JS I Back-end = Python Flask</a>.
     </p>
+
+      <li>
+        <b>Backend API</b> (Back-end ) use Python Flask.
+      </li>
+      <li>
+        <b>front-end</b> Vuejs.
+      </li>
+
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
       <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
+      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">Vue-router</a></li>
     </ul>
     <h3>Essential Links</h3>
     <ul>
