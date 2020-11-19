@@ -1,0 +1,453 @@
+{
+    'bounds': {
+        'northeast': {
+            'lat': 13.8059442,
+            'lng': 100.5507603
+        },
+        'southwest': {
+            'lat': 13.7427957,
+            'lng': 100.5325228
+        }
+    },
+    'copyrights': 'Map data ©2020 Google',
+    'legs': [{
+        'distance': {
+            'text': '11.4 km',
+            'value': 11406
+        },
+        'duration': {
+            'text': '21 mins',
+            'value': 1273
+        },
+        'end_address': '4,4/1- 2,4/4 Room A107, Atrium zone, 1st floor, Rama I Rd, Khwaeng Pathum Wan, Khet Pathum Wan, Krung Thep Maha Nakhon 10330, Thailand',
+        'end_location': {
+            'lat': 13.745139,
+            'lng': 100.5388591
+        },
+        'start_address': '1 Siam Cement Alley, Khwaeng Bang Sue, Khet Bang Sue, Krung Thep Maha Nakhon 10800, Thailand',
+        'start_location': {
+            'lat': 13.8059442,
+            'lng': 100.5373727
+        },
+        'steps': [{
+            'distance': {
+                'text': '0.2 km',
+                'value': 218
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 83
+            },
+            'end_location': {
+                'lat': 13.8048426,
+                'lng': 100.537431
+            },
+            'html_instructions': 'Head <b>southwest</b><div style="font-size:0.9em">Restricted usage road</div>',
+            'polyline': {
+                'points': 'cngsAqesdRf@PCFENELCHAD?@?@?@vAd@JB@@D?D?HA@ADABADGDGHML]J[Pe@'
+            },
+            'start_location': {
+                'lat': 13.8059442,
+                'lng': 100.5373727
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '61 m',
+                'value': 61
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 42
+            },
+            'end_location': {
+                'lat': 13.8044003,
+                'lng': 100.5372173
+            },
+            'html_instructions': 'Turn <b>right</b><div style="font-size:0.9em">Restricted usage road</div>',
+            'maneuver': 'turn-right',
+            'polyline': {
+                'points': 'gggsA}esdRBI`A^JHBD@B'
+            },
+            'start_location': {
+                'lat': 13.8048426,
+                'lng': 100.537431
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.1 km',
+                'value': 142
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 45
+            },
+            'end_location': {
+                'lat': 13.8044242,
+                'lng': 100.5361833
+            },
+            'html_instructions': 'Turn <b>right</b> toward <b>ซอย ปูนซีเมนต์ไทย ถนนหน้าบ้าน</b><div style="font-size:0.9em">Partial restricted usage road</div>',
+            'maneuver': 'turn-right',
+            'polyline': {
+                'points': 'odgsAsdsdR?BAJQb@e@t@K^AD?H@HDDFBLHd@V'
+            },
+            'start_location': {
+                'lat': 13.8044003,
+                'lng': 100.5372173
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '5 m',
+                'value': 5
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 1
+            },
+            'end_location': {
+                'lat': 13.8044102,
+                'lng': 100.536224
+            },
+            'html_instructions': 'Turn <b>left</b> onto <b>ซอย ปูนซีเมนต์ไทย ถนนหน้าบ้าน</b>',
+            'maneuver': 'turn-left',
+            'polyline': {
+                'points': 'sdgsAc~rdR@G'
+            },
+            'start_location': {
+                'lat': 13.8044242,
+                'lng': 100.5361833
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.7 km',
+                'value': 661
+            },
+            'duration': {
+                'text': '2 mins',
+                'value': 105
+            },
+            'end_location': {
+                'lat': 13.7994284,
+                'lng': 100.5331728
+            },
+            'html_instructions': 'Make a <b>U-turn</b>',
+            'maneuver': 'uturn-right',
+            'polyline': {
+                'points': 'qdgsAk~rdR@GJH?@JDADAH?H@@?@?@BD@BFFNJf@Tn@Z^P`@PPJDB`@b@t@\\t@ZnAh@B@DBNFNF^PhAh@xAn@RJPHB@B@ZNZNd@RRJTJb@RRHJDFDb@RHD'
+            },
+            'start_location': {
+                'lat': 13.8044102,
+                'lng': 100.536224
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.6 km',
+                'value': 585
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 82
+            },
+            'end_location': {
+                'lat': 13.7971267,
+                'lng': 100.5380373
+            },
+            'html_instructions': 'Turn <b>left</b> at <b>แยก วัดสะพานสูง</b> onto <b>ถนน พระราม6</b>',
+            'maneuver': 'turn-left',
+            'polyline': {
+                'points': 'mefsAikrdRZy@b@cAd@kAn@_BtAiDHUPg@Ne@l@eBN_@La@FOL[BKDQ@EDKHW@CXeADMFKJU'
+            },
+            'start_location': {
+                'lat': 13.7994284,
+                'lng': 100.5331728
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '62 m',
+                'value': 62
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 8
+            },
+            'end_location': {
+                'lat': 13.7972935,
+                'lng': 100.5385643
+            },
+            'html_instructions': 'Slight <b>left</b> onto <b>ถนน กำแพงเพชร 5</b>',
+            'maneuver': 'turn-slight-left',
+            'polyline': {
+                'points': 'awesAwisdR?W@OAKEKGKQ['
+            },
+            'start_location': {
+                'lat': 13.7971267,
+                'lng': 100.5380373
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.3 km',
+                'value': 311
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 54
+            },
+            'end_location': {
+                'lat': 13.7979108,
+                'lng': 100.5411888
+            },
+            'html_instructions': 'Continue onto <b>ถนน กำแพงเพชร</b>',
+            'polyline': {
+                'points': 'axesA_msdRUSSQKMWYQ]O[Qc@G_@Ey@C[?A@Y?UHiAJoB'
+            },
+            'start_location': {
+                'lat': 13.7972935,
+                'lng': 100.5385643
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.5 km',
+                'value': 457
+            },
+            'duration': {
+                'text': '2 mins',
+                'value': 95
+            },
+            'end_location': {
+                'lat': 13.7944843,
+                'lng': 100.5393316
+            },
+            'html_instructions': 'Turn <b>right</b><div style="font-size:0.9em">Toll road</div>',
+            'maneuver': 'turn-right',
+            'polyline': {
+                'points': '}{esAm}sdR?C@S\\FAP`@RD@@@D@HBPF@@@?RHb@Pr@Vv@TXHz@^f@X@@n@d@HDZRLHHFDBNHNLFBFDLFhBx@'
+            },
+            'start_location': {
+                'lat': 13.7979108,
+                'lng': 100.5411888
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '2.3 km',
+                'value': 2329
+            },
+            'duration': {
+                'text': '3 mins',
+                'value': 182
+            },
+            'end_location': {
+                'lat': 13.7747565,
+                'lng': 100.5327201
+            },
+            'html_instructions': 'Merge onto <b>ทางพิเศษศรีรัช</b><div style="font-size:0.9em">Toll road</div>',
+            'maneuver': 'merge',
+            'polyline': {
+                'points': 'ofesAyqsdRRFRDpCz@TF^L|Ad@v@Xf@NlA\\PDDBJBlBj@VH^Lf@NZH`@LlBj@VHtBn@PFLDNDTFl@P^L^LbAX`@LzH`CNDNDJB?@@?JBTHVHhCv@ZJnC~@~@X|@Zt@Pr@Pj@Lj@NxBp@l@T\\JZHfD`AXFhAXRF@?p@R`@Lx@VnA\\l@RpAXF@TFFBTDz@Hx@Db@@N?tAAp@Cp@ERAPAd@Ad@A`BCZ@X@'
+            },
+            'start_location': {
+                'lat': 13.7944843,
+                'lng': 100.5393316
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '2.5 km',
+                'value': 2510
+            },
+            'duration': {
+                'text': '3 mins',
+                'value': 150
+            },
+            'end_location': {
+                'lat': 13.7591589,
+                'lng': 100.5477078
+            },
+            'html_instructions': 'Keep <b>left</b> at the fork to stay on <b>ทางพิเศษศรีรัช</b>, follow signs for <b>Din Daeng</b>/<wbr/><b>ดินแดง</b><div style="font-size:0.9em">Toll road</div>',
+            'maneuver': 'fork-left',
+            'polyline': {
+                'points': 'gkasAohrdRBABAR@R?f@BNBPB@?F@TB\\D\\BPBP@F@N@V?B@L?~@@l@?^E^GPE@AXIh@S@AJE@ALGBAd@[TSDC@CFEHIBCDGd@o@Va@@AV]JYLY|@mBRe@NY@AFKBIZs@@EHSJWJWFMd@gATi@BILU?AHMLSLS@A?A@C^m@Va@FO@A?AHMDIb@s@l@w@NQ`@a@j@k@~@q@h@]bAq@XQJGBAVMHEDCDABAd@WHEDCFEhAu@|@s@^a@TW@Aj@u@t@_Ah@_Al@sA@C@E@E?AFQHYPm@DMFM?CFMHS`@oAPg@FOBEDIDKHQ@AVa@Xe@HMHKDGLOHMDEp@u@VWJMJK^[HG@AJInAaAlAcAp@g@ZYXWXUHGDC?ATQLKFGHId@_@TSRQh@e@RQd@a@TSVUVS'
+            },
+            'start_location': {
+                'lat': 13.7747565,
+                'lng': 100.5327201
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.9 km',
+                'value': 918
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 54
+            },
+            'end_location': {
+                'lat': 13.7566775,
+                'lng': 100.5469078
+            },
+            'html_instructions': 'Take the exit toward <b>Din Daeng</b>/<wbr/><b>Bang Na Dao Khanong</b><div style="font-size:0.9em">Toll road</div>',
+            'maneuver': 'ramp-left',
+            'polyline': {
+                'points': 'wi~rAefudRHQZ_@Z[Z[Ze@@ADGFIFIDIVa@HQPa@@AL]@AJ]?A@AR_A@C@AJk@HY@CDM@CBGFQJURUROHCHENENC^ARAD?N?F@RBB?HBHBHDFF@?HFFD?@B@HJHN@@DJ@@DJDL@HBN@H?NARCVAHDZCJGf@GXAHCT?@CLc@nC}@xF'
+            },
+            'start_location': {
+                'lat': 13.7591589,
+                'lng': 100.5477078
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '1.0 km',
+                'value': 1009
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 59
+            },
+            'end_location': {
+                'lat': 13.7499928,
+                'lng': 100.5496945
+            },
+            'html_instructions': 'Keep <b>left</b> at the fork, follow signs for <b>Sukhumvit</b>/<wbr/><b>Bang Na</b>/<wbr/><b>Dao Khanong</b> and merge onto <b>ทางพิเศษเฉลิมมหานคร</b><div style="font-size:0.9em">Toll road</div>',
+            'maneuver': 'fork-left',
+            'polyline': {
+                'points': 'gz}rAeaudRA`@A`@@n@@H@BBJ@DFLHRPVPNNHLFPFJBRBH?J@F?LAJ?FAVCNCLCVCNAR?l@[dAi@hAy@PINKPQ@CPONUTa@LQd@q@NSBGFIl@cAR[j@w@@CVYHK`@a@XWj@a@\\Sb@SHC@?TI?AB?DC|@Y`@OVKTKJAz@Q^E^C'
+            },
+            'start_location': {
+                'lat': 13.7566775,
+                'lng': 100.5469078
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.3 km',
+                'value': 338
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 19
+            },
+            'end_location': {
+                'lat': 13.7470115,
+                'lng': 100.5501764
+            },
+            'html_instructions': 'Take exit <b>1-01</b> toward <b>Sukhumvit</b><div style="font-size:0.9em">Toll road</div>',
+            'maneuver': 'ramp-left',
+            'polyline': {
+                'points': 'mp|rAqrudRRONEBALCb@E`@Cb@CTCTAVC@?XEh@GB?DAXAZCJ?|AIb@CzAI'
+            },
+            'start_location': {
+                'lat': 13.7499928,
+                'lng': 100.5496945
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.5 km',
+                'value': 473
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 41
+            },
+            'end_location': {
+                'lat': 13.7427957,
+                'lng': 100.5506967
+            },
+            'html_instructions': 'Keep <b>left</b> to stay on <b>Exit 1-01</b>, follow signs for <b>Asoke Sukhumvit</b>/<wbr/><b>North Ploenchit</b><div style="font-size:0.9em">Toll road</div>',
+            'maneuver': 'keep-left',
+            'polyline': {
+                'points': 'y}{rAsuudRPEHA^Ab@E`@ALAp@E~AGfBITAZCF?`@CBA~@If@GH?~AKfAGdAI'
+            },
+            'start_location': {
+                'lat': 13.7470115,
+                'lng': 100.5501764
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '1.1 km',
+                'value': 1138
+            },
+            'duration': {
+                'text': '3 mins',
+                'value': 200
+            },
+            'end_location': {
+                'lat': 13.744609,
+                'lng': 100.5403296
+            },
+            'html_instructions': 'Turn <b>right</b> onto <b>ถนน เพลินจิต</b>/<wbr/><b>ถ. สุขุมวิท</b><div style="font-size:0.9em">Continue to follow ถนน เพลินจิต</div>',
+            'maneuver': 'turn-right',
+            'polyline': {
+                'points': 'oc{rA{xudR?FADIl@CP?@AFAF?BCT?FEXAJM`ACTCVGn@Gn@Gp@CRANKx@Eb@Iv@A??@?@CPMfAMxAIv@ALYbDAHAJKbAEb@CTIv@CPIx@CXE^KjAKjACVCVGh@AFEb@Ej@ARIz@?FGd@?HA@Iv@AXAJEXGp@AJKv@'
+            },
+            'start_location': {
+                'lat': 13.7427957,
+                'lng': 100.5506967
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '0.2 km',
+                'value': 154
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 37
+            },
+            'end_location': {
+                'lat': 13.7448484,
+                'lng': 100.5389253
+            },
+            'html_instructions': 'At <b>แยก ราชประสงค์</b>, continue onto <b>ถนน พระรามที่ ๑</b>',
+            'polyline': {
+                'points': 'yn{rAaxsdRAL?JCTATEXCRCZCVCPAPOjA'
+            },
+            'start_location': {
+                'lat': 13.744609,
+                'lng': 100.5403296
+            },
+            'travel_mode': 'DRIVING'
+        }, {
+            'distance': {
+                'text': '35 m',
+                'value': 35
+            },
+            'duration': {
+                'text': '1 min',
+                'value': 16
+            },
+            'end_location': {
+                'lat': 13.745139,
+                'lng': 100.5388591
+            },
+            'html_instructions': 'Turn <b>right</b><div style="font-size:0.9em">Destination will be on the right</div>',
+            'maneuver': 'turn-right',
+            'polyline': {
+                'points': 'ip{rAiosdREFIDG@G@YC'
+            },
+            'start_location': {
+                'lat': 13.7448484,
+                'lng': 100.5389253
+            },
+            'travel_mode': 'DRIVING'
+        }],
+        'traffic_speed_entry': [],
+        'via_waypoint': []
+    }],
+    'overview_polyline': {
+        'points': 'cngsAqesdRf@PIVK^?@vAf@XDTGJOVk@\\aABI`A^NN@FSn@e@t@K^ANFNTLd@V@G@GJHJFCN@JDLVRvAp@xAr@`@b@t@\\dCdAh@TlGtCvDdBl@X~@}BtDkJfCmHx@sCRa@@g@GWYg@i@e@c@g@a@y@Qc@G_@IuA@[TsE@S\\FAP`@RFBNDh@RvAh@pA^bBx@p@f@|@j@bAl@|B`AdD`AjEtA~H~B`KzCdSdGlIlC|Bt@hBb@vA\\fDfAzF~ApCt@xEvAvBf@pAN|AFdBAbBIpBGzCAV?z@Bj@HpALj@Fx@BlB@~@MvAe@NIPIz@o@XWfA}AX_@Xs@bBoDrAaDlAqCd@w@dAkBNWb@s@l@w@p@s@j@k@~@q@lBoAd@Yj@Yx@a@LIhAu@|@s@t@y@l@w@t@_Ah@_An@wAJ_@h@cBr@uBb@gAh@aAr@gA\\c@`BgBbHwFnBaBrE}Dn@i@d@q@v@w@\\g@Ze@`@s@Rc@Z}@VgAXkAJYRg@f@e@r@Sx@Cn@Dd@TRNX^Rf@DX@XEj@Bd@UvAk@tD}@xFA`@?pAH^P`@b@f@n@Xt@Hh@ClAOb@ArBeAzAcA`@]RSd@w@fA_BhAiBnAaBz@y@hAu@n@W^OlCaAfAS~@IRONEBAp@IdAGdAIlAO~CO~BMZGbAGn@CnGYhAIfBQhBKlCQALOhA_@fD[hDW`Cu@fHsBrTSlBQbCe@zEOpAKpAa@vDOLOBYC'
+    },
+    'summary': 'ทางพิเศษศรีรัช',
+    'warnings': [],
+    'waypoint_order': []
+}
