@@ -8,7 +8,6 @@ from pony.flask import Pony
 from pony.orm import Database, PrimaryKey, Required
 from flask_restful import Resource, Api
 
-
 DEBUG = True
 
 db = Database()
@@ -50,6 +49,7 @@ if google_api_key is None or google_api_key == "":
           "GOOGLE_PROJECT_CREDENTIAL_KEY in config.py or OS variable")
     sys.exit(128)
 
+# Init Google-map client.
 gmap_client_connect = googlemaps.Client(google_api_key)
 
 # Possible all route options.
@@ -59,26 +59,36 @@ possible_route_type = ["driving", "walking", "transit", "bicycling"]
 drive_mode = lambda x: gmap_client_connect. \
     distance_matrix('SCG+สำนักงานใหญ่+บางซื่อ', 'Central+World+(Flagship+store)', mode=x)
 
+# Init flask-restful
 api = Api(app)
 
-distance_matrix = lambda x: x['rows'][0]['elements'][0]['distance']
 
 class MinMapDistance(Resource):
     """"
     Handling RESTFUL for Google-map Distance metrix.
     """
+    # lambda filter only need attribute ( distance ).
+    distance_matrix = lambda x: x['rows'][0]['elements'][0]['distance']
+
     def get(self):
         """
         Handling GET Request. payload
         :return json
         """
+        distance_matrix = lambda x: x['rows'][0]['elements'][0]['distance']
         payload_possible_route = [(index, drive_mode(index)) for index in possible_route_type]
-        distance_metrixs = [(key, distance_matrix(value)) for key, value in json.loads(json.dumps(payload_possible_route)) if
+        distance_metrixs = [(key, distance_matrix(value)) for key, value in
+                            json.loads(json.dumps(payload_possible_route)) if
                             value['rows'][0]['elements'][0]['status'] != "ZERO_RESULTS"]
         response = self.restruct_payload(distance_metrixs)
         return response
 
-    def restruct_payload(self,payload):
+    def restruct_payload(self, payload):
+        """
+        Restruct payload for client easy to mapping to Vuetable-2.
+        :param payload: List() of distance metrixs
+        :return:  List() with dict() contain each of route-weight and mark with MIN() distance.
+        """
         minimum_distance = min(payload, key=lambda obj: obj[1]['value'])[0]
         restruct_dict = []
         for item in payload:
@@ -92,12 +102,10 @@ class MinMapDistance(Resource):
             restruct_dict.append(_temp)
         return restruct_dict
 
+
 # eanble CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-# def jsonify(*args, **kwargs):
-#     return app.response_class(json.dumps(dict(*args, **kwargs),
-#                                          indent=None if request.is_xhr else 2), mimetype='application/json')
 
 @app.route('/')
 def hello_world():
@@ -109,23 +117,6 @@ def hello_world():
 @app.route('/ping', methods=['GET'])
 def ping_pong():
     return jsonify('pong')
-
-
-# Prevent burst request, Data entry from google-map does not need dynamic caching is a best choice to use.
-# @app.route('/map-direction', methods=['GET'])
-def get_direction():
-    """
-    Get Distance metrics from Google-map Distance Matrix API.
-
-    Cause by requirement require static location. So this version will embeded location in source.
-    TODO: Approve filter input string parameter and input sanitize.
-    TODO: Support method POST from client.
-    :return:
-    """
-    payload_possible_route = [(index, drive_mode(index)) for index in possible_route_type]
-    response = json.dumps(payload_possible_route, sort_keys = True, indent = 4, separators = (',', ': '))
-    print(response)
-    return jsonify(payload_possible_route)
 
 
 def _enum_xyz(slot):
@@ -152,7 +143,7 @@ def find_xyz():
     for idx, elem in enum_member:
         print(idx, elem)
         _temp = {
-            "index_postion" : idx,
+            "index_postion": idx,
             "element_represent": elem
         }
         temp_store.append(_temp)
@@ -160,8 +151,8 @@ def find_xyz():
     jsonify(json.dumps(temp_store))
 
 
+# API caching will implement in reverse-proxy instead.
 api.add_resource(MinMapDistance, '/map-direction')
-
 
 if __name__ == '__main__':
     # For scalability use model task-queue for task execution.
