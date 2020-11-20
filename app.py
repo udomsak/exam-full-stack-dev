@@ -57,20 +57,16 @@ possible_route_type = ["driving", "walking", "transit", "bicycling"]
 drive_mode = lambda x: gmap_client_connect. \
     distance_matrix('SCG+สำนักงานใหญ่+บางซื่อ', 'Central+World+(Flagship+store)', mode=x)
 
-payload_possible_route = [(index, drive_mode(index)) for index in possible_route_type]
 
-# distance_matrix_json = json.dumps(gmap_client_connect.
-#                              distance_matrix('SCG+สำนักงานใหญ่+บางซื่อ',
-#                                              'Central+World+(Flagship+store)', mode="bicycling"), indent=2)
-
-# print(distance_matrix_json)
-# print(app.config['RQ_REDIS_URL'])
-# print(app.config['GOOGLE_PROJECT_CREDENTIAL_KEY'])
-# print(app.config['GOOGLE_PROJECT_CREDENTIAL_KEY'])
 
 # eanble CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
+def jsonify(*args, **kwargs):
+    if __debug__:
+        _assert_have_json()
+    return current_app.response_class(json.dumps(dict(*args, **kwargs),
+        indent=None if request.is_xhr else 2), mimetype='application/json')
 
 @app.route('/')
 def hello_world():
@@ -91,11 +87,15 @@ def get_direction():
     Get Distance metrics from Google-map Distance Matrix API.
 
     Cause by requirement require static location. So this version will embeded location in source.
-    TODO: Approve filter input string parameter.
+    TODO: Approve filter input string parameter and input sanitize.
     TODO: Support method POST from client.
     :return:
     """
-    pass
+    payload_possible_route = [(index, drive_mode(index)) for index in possible_route_type]
+    response = json.dumps(payload_possible_route, sort_keys = True, indent = 4, separators = (',', ': '))
+    return jsonify(response)
+
+
 
 
 def _enum_xyz(slot):
