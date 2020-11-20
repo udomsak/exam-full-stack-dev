@@ -5,7 +5,8 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/api-challenge">api-challenge</router-link> |
       <router-link to="/map-challenge">map-challenge</router-link> |
-      <router-link to="/conver-letter">conver-letter</router-link>
+      <router-link to="/conver-letter">conver-letter</router-link> |
+      <router-link to="/ping">ping </router-link>
 
     </div>
     <router-view/>
