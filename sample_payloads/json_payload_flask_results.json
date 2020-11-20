@@ -1,0 +1,20 @@
+[
+  {
+    "mode": "driving",
+    "distance": "11.4 km",
+    "metrix_value": 11440,
+    "short_path_selected": "N"
+  },
+  {
+    "mode": "walking",
+    "distance": "8.2 km",
+    "metrix_value": 8170,
+    "short_path_selected": "Y"
+  },
+  {
+    "mode": "transit",
+    "distance": "13.0 km",
+    "metrix_value": 12965,
+    "short_path_selected": "N"
+  }
+]
