@@ -7,11 +7,13 @@ as well. So this project will continue even i met a dead-line commit. (**midnigh
 * NOT complete yet at all. 
 
 ## Install and Config.
-
+TODO.
 
 ## Feature
 ### Backend.
-- [x] Can fetch shortest distance by using Google MAP API. **Mandatory**.
+- [ ] Please use “Google API” for finding the best way to go to Central World from SCG Bangsue.
+- [x] X, Y, 5, 9, 15, 23, Z  - Please create a new function for finding X, Y, Z value.
+- [ ] If A = 21, A + B = 23, A + C = -21 - Please create a new function for finding B and C value.
 - [ ] Have unit test.
 - [ ] API caching.
 - [ ] Queueing jobs and processing them in the background with workers for scalability.
@@ -24,8 +26,11 @@ as well. So this project will continue even i met a dead-line commit. (**midnigh
 - [ ] Integrate with Auth0.
 
 ### Front-end.
-- [x] Have Front-end that use VUEjs. ( locate at frontends folder)
-- [ ] Support PWA ( Service-worker ) to caching all of data. **Mandatory**.
+- [ ] Create a new router called “DOSCG”.
+- [ ] Please use Bootstrap V4 for CSS.
+- [ ] Please create Top bar, body, and footer for every page components.
+- [ ] Please create a new page for showing results from your API(separate router by each API)
+- [ ] One simple static page for your CV.
 
 ### Thrid-Party. Application.
 - [ ]  create a small project using Line messaging API for getting a notification when your Line Bot can not answer a question to the customer more than 10 second.
