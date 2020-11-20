@@ -6,6 +6,8 @@ import sys, json
 import googlemaps
 from pony.flask import Pony
 from pony.orm import Database, PrimaryKey, Required
+from flask_restful import Resource, Api
+
 
 DEBUG = True
 
@@ -57,16 +59,45 @@ possible_route_type = ["driving", "walking", "transit", "bicycling"]
 drive_mode = lambda x: gmap_client_connect. \
     distance_matrix('SCG+สำนักงานใหญ่+บางซื่อ', 'Central+World+(Flagship+store)', mode=x)
 
+api = Api(app)
 
+distance_matrix = lambda x: x['rows'][0]['elements'][0]['distance']
+
+class MinMapDistance(Resource):
+    """"
+    Handling RESTFUL for Google-map Distance metrix.
+    """
+    def get(self):
+        """
+        Handling GET Request. payload
+        :return json
+        """
+        payload_possible_route = [(index, drive_mode(index)) for index in possible_route_type]
+        distance_metrixs = [(key, distance_matrix(value)) for key, value in json.loads(json.dumps(payload_possible_route)) if
+                            value['rows'][0]['elements'][0]['status'] != "ZERO_RESULTS"]
+        response = self.restruct_payload(distance_metrixs)
+        return response
+
+    def restruct_payload(self,payload):
+        minimum_distance = min(payload, key=lambda obj: obj[1]['value'])[0]
+        restruct_dict = []
+        for item in payload:
+            use_direction = "Y" if item[0] == minimum_distance else "N"
+            _temp = {
+                "mode": item[0],
+                "distance": item[1]['text'],
+                "metrix_value": item[1]['value'],
+                "short_path_selected": use_direction
+            }
+            restruct_dict.append(_temp)
+        return restruct_dict
 
 # eanble CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
 
-def jsonify(*args, **kwargs):
-    if __debug__:
-        _assert_have_json()
-    return current_app.response_class(json.dumps(dict(*args, **kwargs),
-        indent=None if request.is_xhr else 2), mimetype='application/json')
+# def jsonify(*args, **kwargs):
+#     return app.response_class(json.dumps(dict(*args, **kwargs),
+#                                          indent=None if request.is_xhr else 2), mimetype='application/json')
 
 @app.route('/')
 def hello_world():
@@ -81,7 +112,7 @@ def ping_pong():
 
 
 # Prevent burst request, Data entry from google-map does not need dynamic caching is a best choice to use.
-@app.route('/map-direction', methods=['GET'])
+# @app.route('/map-direction', methods=['GET'])
 def get_direction():
     """
     Get Distance metrics from Google-map Distance Matrix API.
@@ -93,9 +124,8 @@ def get_direction():
     """
     payload_possible_route = [(index, drive_mode(index)) for index in possible_route_type]
     response = json.dumps(payload_possible_route, sort_keys = True, indent = 4, separators = (',', ': '))
-    return jsonify(response)
-
-
+    print(response)
+    return jsonify(payload_possible_route)
 
 
 def _enum_xyz(slot):
@@ -130,6 +160,7 @@ def find_xyz():
     jsonify(json.dumps(temp_store))
 
 
+api.add_resource(MinMapDistance, '/map-direction')
 
 
 if __name__ == '__main__':
