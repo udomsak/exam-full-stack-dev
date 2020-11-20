@@ -1,7 +1,10 @@
 # Sample Application use Flask with Vuejs.
 
 This project (firstly) intend to use for interview test. However i found this can practice my self for full-stack dev 
-as well. So this project will continue even i met a dead-line commit. (**midnight 20/11/2020**) 
+as well. So this project will continue even i met a dead-line commit. 
+
+## Dead-line  commit
+* midnight 20/11/2020. (_**Fail**_)
 
 ## State 
 * NOT complete yet at all. 
