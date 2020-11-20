@@ -1,0 +1,110 @@
+[
+  [
+    "driving",
+    {
+      "destination_addresses": [
+        "999/9 Rama I Rd, Khwaeng Pathum Wan, Khet Pathum Wan, Krung Thep Maha Nakhon 10330, Thailand"
+      ],
+      "origin_addresses": [
+        "1 Siam Cement Alley, Khwaeng Bang Sue, Khet Bang Sue, Krung Thep Maha Nakhon 10800, Thailand"
+      ],
+      "rows": [
+        {
+          "elements": [
+            {
+              "distance": {
+                "text": "9.0 km",
+                "value": 9021
+              },
+              "duration": {
+                "text": "23 mins",
+                "value": 1355
+              },
+              "status": "OK"
+            }
+          ]
+        }
+      ],
+      "status": "OK"
+    }
+  ],
+  [
+    "walking",
+    {
+      "destination_addresses": [
+        "999/9 Rama I Rd, Khwaeng Pathum Wan, Khet Pathum Wan, Krung Thep Maha Nakhon 10330, Thailand"
+      ],
+      "origin_addresses": [
+        "1 Siam Cement Alley, Khwaeng Bang Sue, Khet Bang Sue, Krung Thep Maha Nakhon 10800, Thailand"
+      ],
+      "rows": [
+        {
+          "elements": [
+            {
+              "distance": {
+                "text": "8.2 km",
+                "value": 8170
+              },
+              "duration": {
+                "text": "1 hour 42 mins",
+                "value": 6138
+              },
+              "status": "OK"
+            }
+          ]
+        }
+      ],
+      "status": "OK"
+    }
+  ],
+  [
+    "transit",
+    {
+      "destination_addresses": [
+        "999/9 Rama I Rd, Khwaeng Pathum Wan, Khet Pathum Wan, Krung Thep Maha Nakhon 10330, Thailand"
+      ],
+      "origin_addresses": [
+        "1 Siam Cement Alley, Khwaeng Bang Sue, Khet Bang Sue, Krung Thep Maha Nakhon 10800, Thailand"
+      ],
+      "rows": [
+        {
+          "elements": [
+            {
+              "distance": {
+                "text": "10.6 km",
+                "value": 10560
+              },
+              "duration": {
+                "text": "46 mins",
+                "value": 2737
+              },
+              "status": "OK"
+            }
+          ]
+        }
+      ],
+      "status": "OK"
+    }
+  ],
+  [
+    "bicycling",
+    {
+      "destination_addresses": [
+        "999/9 Rama I Rd, Khwaeng Pathum Wan, Khet Pathum Wan, Krung Thep Maha Nakhon 10330, Thailand"
+      ],
+      "origin_addresses": [
+        "1 Siam Cement Alley, Khwaeng Bang Sue, Khet Bang Sue, Krung Thep Maha Nakhon 10800, Thailand"
+      ],
+      "rows": [
+        {
+          "elements": [
+            {
+              "status": "ZERO_RESULTS"
+            }
+          ]
+        }
+      ],
+      "status": "OK"
+    }
+  ]
+]
