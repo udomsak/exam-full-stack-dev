@@ -150,7 +150,48 @@ class FindBandCValue(Resource):
              'C': self.find_bc(21, -21),
              'result': message })
 
+class FindXYZ(Resource):
+    def get(self):
+        """
+         X, Y, 5, 9, 15, 23, Z - Please create a new function for finding X, Y, Z value.
+         https://github.com/udomsak/exam-full-stack-dev
+        :return:
+        """
+        X = 'X'
+        Y = 'Y'
+        Z = 'Z'
 
+        response = self.idx_poisiton_find(X=X, Y=Y, Z=Z)
+        return jsonify(response)
+
+    def idx_poisiton_find(self, X,Y,Z):
+        """
+        Finding element index in List()
+        :param X: x element want to find.
+        :param Y: y element want to find.
+        :param Z: z element want to find.
+        :return: jsonify object with result descripe:
+        [{"element_represent":"X","index_postion":0},{"element_represent":"Y","index_postion":1},
+        {"element_represent":"Z","index_postion":6}]
+        """
+        slot_value = [X, Y, 5, 9, 15, 23, Z]
+        enum_member = [filter for filter in enumerate(slot_value)
+                       if 'X' in filter or 'Y' in filter or 'Z' in filter]
+        temp_store = []
+        for idx, elem in enum_member:
+            _temp = {
+                "index_postion": idx,
+                "element_represent": elem
+            }
+            temp_store.append(_temp)
+        response = temp_store
+        return response
+    def post(self):
+        pass
+
+# if X is None and Y is None and Z is None:
+#     message = "Need X, Y, Z parameter found x={},y={},z={}".format(X, Y, Z)
+#     return jsonify(message)
 
 # eanble CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
@@ -167,44 +208,10 @@ def hello_world():
 def ping_pong():
     return jsonify('pong')
 
-
-def _enum_xyz(slot):
-    for element in slot:
-        yield element
-
-
-@app.route('/find-xyz', methods=['POST'])
-def find_xyz():
-    """
-    Use to find element in request
-    :return:
-    """
-    X = request.form['X']
-    Y = request.form['Y']
-    Z = request.form['Z']
-    if X is None and Y is None and Z is None:
-        message = "Need X, Y, Z parameter found x={},y={},z={}".format(X, Y, Z)
-        app.logger(message)
-        return jsonify(message)
-    slot_value = [X, Y, 5, 9, 15, 23, Z]
-    enum_member = enumerate(_enum_xyz(slot_value))
-    temp_store = []
-    for idx, elem in enum_member:
-        print(idx, elem)
-        _temp = {
-            "index_postion": idx,
-            "element_represent": elem
-        }
-        temp_store.append(_temp)
-    app.logger(temp_store)
-    jsonify(json.dumps(temp_store))
-
-
-
-
 # API caching will implement in reverse-proxy instead.
 api.add_resource(MinMapDistance, '/map-direction')
 api.add_resource(FindBandCValue, '/find-bc')
+api.add_resource(FindXYZ, '/find-xyz')
 
 if __name__ == '__main__':
     # For scalability use model task-queue for task execution.
