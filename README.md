@@ -14,9 +14,9 @@ TODO.
 
 ## Feature
 ### Backend.
-- [ ] Please use “Google API” for finding the best way to go to Central World from SCG Bangsue.
+- [X] Please use “Google API” for finding the best way to go to Central World from SCG Bangsue.
 - [x] X, Y, 5, 9, 15, 23, Z  - Please create a new function for finding X, Y, Z value.
-- [ ] If A = 21, A + B = 23, A + C = -21 - Please create a new function for finding B and C value.
+- [X] If A = 21, A + B = 23, A + C = -21 - Please create a new function for finding B and C value.
 - [ ] Have unit test.
 - [ ] API caching.
 - [ ] Queueing jobs and processing them in the background with workers for scalability.
