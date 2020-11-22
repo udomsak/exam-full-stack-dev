@@ -102,6 +102,55 @@ class MinMapDistance(Resource):
             restruct_dict.append(_temp)
         return restruct_dict
 
+class FindBandCValue(Resource):
+    def find_bc(self, A=21, result=-21):
+        """
+        Simple calculation finding / magic number.
+        If A = 21, A + B = 23, A + C = -21 - Please create a new function for finding B and C value.
+
+        In case you want to find ALL possible value use range combine with Set() and iterate to finding number.
+        If you want to use Lexical parser may be use PLY (Python Lex-Yacc).
+
+        :param A: Is fix value (a detail above) default is 21
+        :param result: Is fix value (a detail above) default is -21
+        :return:
+        """
+        # check negative number
+        if result < 0:
+            C = -(A + abs(-result))
+            find_bc_response = {
+                "A": A,
+                "B": C,
+                "result": result,
+                "text": "If A = {}, A + {} = -21".format(A, C)
+            }
+            return C
+        if result > 0:
+            B = result - A
+            find_bc_response = {
+                "A": A,
+                "B": B,
+                "result": result,
+                "text": "If A = {}, A + {} = 23".format(A, B)
+            }
+            return B
+        return None
+
+    def get(self):
+        """
+        Simple calculation finding / magic number.
+        If A = 21, A + B = 23, A + C = -21 - Please create a new function for finding B and C value.
+
+        :return: Jsonify
+        """
+        message = "A = 21, A + {} = 23, A + {} = -21 ".format(self.find_bc(21, 23), self.find_bc(21, -21))
+        return jsonify(
+            {'A': 21,
+             'B': self.find_bc(21, 23),
+             'C': self.find_bc(21, -21),
+             'result': message })
+
+
 
 # eanble CORS
 CORS(app, resources={r'/*': {'origins': '*'}})
@@ -151,8 +200,11 @@ def find_xyz():
     jsonify(json.dumps(temp_store))
 
 
+
+
 # API caching will implement in reverse-proxy instead.
 api.add_resource(MinMapDistance, '/map-direction')
+api.add_resource(FindBandCValue, '/find-bc')
 
 if __name__ == '__main__':
     # For scalability use model task-queue for task execution.
